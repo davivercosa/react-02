@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "425px",
+  tablet: "768px",
+};
+
 export const HomeContainer = styled.div`
   padding: 5.75rem 0;
 `;
@@ -8,14 +13,18 @@ export const InfoContent = styled.div`
   align-items: flex-start;
   display: flex;
   gap: 3.5rem;
-  justify-content: center;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const InfoTitle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 36.75rem;
 
   h1 {
     font-family: "Baloo 2", sans-serif;
@@ -32,7 +41,6 @@ export const InfoItemsContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 35.438rem;
 `;
 
 export const InfoItems = styled.div`
@@ -44,5 +52,6 @@ export const InfoItems = styled.div`
 export const Item = styled.div`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
 `;

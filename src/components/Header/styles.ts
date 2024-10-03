@@ -1,9 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { NavLink } from "react-router-dom";
+
+const breakpoints = {
+  mobile: "425px",
+  tablet: "768px",
+};
 
 export const HeaderContainer = styled.header`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
@@ -22,6 +28,10 @@ export const NavLocation = styled.div`
   gap: 0.25rem;
   justify-content: center;
   padding: 0.5rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
