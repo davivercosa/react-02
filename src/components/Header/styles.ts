@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const breakpoints = {
@@ -9,8 +9,11 @@ const breakpoints = {
 export const HeaderContainer = styled.header`
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Nav = styled.nav`

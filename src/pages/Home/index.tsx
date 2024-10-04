@@ -1,11 +1,4 @@
-import {
-  HomeContainer,
-  InfoContent,
-  InfoTitle,
-  InfoItems,
-  InfoItemsContainer,
-  Item,
-} from "./styles";
+import { HomeContainer, Intro, Content, Title, Items, Item } from "./styles";
 
 import info from "../../assets/info.png";
 import cart from "../../assets/cart.png";
@@ -16,19 +9,16 @@ import box from "../../assets/box.png";
 export function Home() {
   return (
     <HomeContainer>
-      <div>
-        <InfoContent>
-          <InfoTitle>
-            <h1>Find the perfect coffee for any time of the day</h1>
+      <Intro>
+        <Content>
+          <Title>
+            <h1>Encontre o café perfeito para qualquer hora do dia</h1>
             <span>
-              With Coffee Delivery, you get your coffee wherever you are,
-              anytime
+              Com o Coffee Delivery você recebe seu café onde estiver, a
+              qualquer hora
             </span>
-          </InfoTitle>
-          <img src={info} alt="Info" />
-        </InfoContent>
-        <InfoItemsContainer>
-          <InfoItems>
+          </Title>
+          <Items>
             <Item>
               <img src={cart} alt="Cart" />
               <span>Compra simples e segura</span>
@@ -37,8 +27,6 @@ export function Home() {
               <img src={watch} alt="Watch" />
               <span>Entrega rápida e rastreada</span>
             </Item>
-          </InfoItems>
-          <InfoItems>
             <Item>
               <img src={box} alt="Box" />
               <span>Embalagem mantém o vafé intacto</span>
@@ -47,12 +35,13 @@ export function Home() {
               <img src={coffee} alt="Coffee" />
               <span>O café chega fresquinho até você</span>
             </Item>
-          </InfoItems>
-        </InfoItemsContainer>
-      </div>
-      <div>
-        <h2>Nossos Cafés</h2>
-      </div>
+          </Items>
+        </Content>
+        <img src={info} alt="Info" />
+      </Intro>
+      <div></div>
+
+      {/* <CoffeeList></CoffeeList> */}
     </HomeContainer>
   );
 }

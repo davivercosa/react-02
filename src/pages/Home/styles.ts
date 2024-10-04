@@ -5,23 +5,36 @@ const breakpoints = {
   tablet: "768px",
 };
 
-export const HomeContainer = styled.div`
-  padding: 5.75rem 0;
+export const HomeContainer = styled.div``;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-export const InfoContent = styled.div`
+export const Intro = styled.div`
   align-items: flex-start;
   display: flex;
   gap: 3.5rem;
+  padding: 5.75rem 0;
 
   @media (max-width: ${breakpoints.mobile}) {
+    flex-wrap: wrap;
+
     img {
-      display: none;
+      order: 1;
+      height: auto;
+      max-width: 100%;
+    }
+
+    ${Content} {
+      order: 2;
     }
   }
 `;
 
-export const InfoTitle = styled.div`
+export const Title = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -37,21 +50,15 @@ export const InfoTitle = styled.div`
   }
 `;
 
-export const InfoItemsContainer = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const InfoItems = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+export const Items = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  grid-template-rows: repeat(2, 1fr); /* 2 linhas */
+  gap: 10px;
 `;
 
 export const Item = styled.div`
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   gap: 0.75rem;
 `;
