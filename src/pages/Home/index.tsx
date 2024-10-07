@@ -1,4 +1,13 @@
-import { HomeContainer, Intro, Content, Title, Items, Item } from "./styles";
+import {
+  HomeContainer,
+  Intro,
+  Content,
+  Title,
+  Items,
+  Item,
+  SpanTitle,
+  SpanSubTitle,
+} from "./styles";
 
 import info from "../../assets/info.png";
 import cart from "../../assets/cart.png";
@@ -12,11 +21,13 @@ export function Home() {
       <Intro>
         <Content>
           <Title>
-            <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-            <span>
+            <SpanTitle>
+              Encontre o café perfeito para qualquer hora do dia
+            </SpanTitle>
+            <SpanSubTitle>
               Com o Coffee Delivery você recebe seu café onde estiver, a
               qualquer hora
-            </span>
+            </SpanSubTitle>
           </Title>
           <Items>
             <Item>

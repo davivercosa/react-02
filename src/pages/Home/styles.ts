@@ -14,7 +14,6 @@ export const Content = styled.div`
 `;
 
 export const Intro = styled.div`
-  align-items: flex-start;
   display: flex;
   gap: 3.5rem;
   padding: 5.75rem 0;
@@ -38,16 +37,16 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+`;
 
-  h1 {
-    font-family: "Baloo 2", sans-serif;
-    font-size: 3rem;
-    font-weight: bolder;
-  }
+export const SpanTitle = styled.span`
+  font-family: "Baloo 2", sans-serif;
+  font-size: 3rem;
+  font-weight: bolder;
+`;
 
-  span {
-    font-size: 1.25rem;
-  }
+export const SpanSubTitle = styled.span`
+  font-size: 1.25rem;
 `;
 
 export const Items = styled.div`

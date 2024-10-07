@@ -8,9 +8,9 @@ const breakpoints = {
 export const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding: 2rem 10rem;
-  max-width: calc(90rem - 10rem);
+  margin: 0 auto;
+  max-width: 90rem;
 
   @media (max-width: ${breakpoints.mobile}) {
     padding: 2rem;
