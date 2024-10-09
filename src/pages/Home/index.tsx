@@ -1,56 +1,67 @@
+import { Intro } from "./components/intro";
 import {
+  CoffeeCard,
+  CoffeeList,
   HomeContainer,
-  Intro,
-  Content,
+  Subtitle,
+  Tag,
+  Tags,
   Title,
-  Items,
-  Item,
-  SpanTitle,
-  SpanSubTitle,
+  Content,
+  Action,
+  ActionButton,
+  Cart,
+  CoffeeCardFooter,
+  ItemPrice,
+  StyledImage,
 } from "./styles";
 
-import info from "../../assets/info.png";
-import cart from "../../assets/cart.png";
-import coffee from "../../assets/coffee.png";
-import watch from "../../assets/watch.png";
-import box from "../../assets/box.png";
+import expresso from "../../assets/Type=Expresso.png";
+import { useTheme } from "styled-components";
+import { Minus, Plus, ShoppingCart } from "@phosphor-icons/react";
 
 export function Home() {
+  const theme = useTheme();
+
   return (
     <HomeContainer>
-      <Intro>
-        <Content>
-          <Title>
-            <SpanTitle>
-              Encontre o café perfeito para qualquer hora do dia
-            </SpanTitle>
-            <SpanSubTitle>
-              Com o Coffee Delivery você recebe seu café onde estiver, a
-              qualquer hora
-            </SpanSubTitle>
-          </Title>
-          <Items>
-            <Item>
-              <img src={cart} alt="Cart" />
-              <span>Compra simples e segura</span>
-            </Item>
-            <Item>
-              <img src={watch} alt="Watch" />
-              <span>Entrega rápida e rastreada</span>
-            </Item>
-            <Item>
-              <img src={box} alt="Box" />
-              <span>Embalagem mantém o vafé intacto</span>
-            </Item>
-            <Item>
-              <img src={coffee} alt="Coffee" />
-              <span>O café chega fresquinho até você</span>
-            </Item>
-          </Items>
-        </Content>
-        <img src={info} alt="Info" />
-      </Intro>
-      <div></div>
+      <Intro></Intro>
+
+      <CoffeeList>
+        <CoffeeCard>
+          <StyledImage src={expresso} alt="Café Expresso"></StyledImage>
+          <Tags>
+            <Tag>Tradicional</Tag>
+            <Tag>Quente</Tag>
+            <Tag>Quente</Tag>
+          </Tags>
+          <Content>
+            <Title>Expresso Tradicional</Title>
+            <Subtitle>
+              O tradicional café feito com água quente e grãos moídos
+            </Subtitle>
+          </Content>
+          <CoffeeCardFooter>
+            <ItemPrice>
+              R$ <span>9,90</span>
+            </ItemPrice>
+            <Action>
+              <ActionButton>
+                <Minus color={theme.purple} size={14} />
+                <span>1</span>
+                <Plus color={theme.purple} size={14} />
+              </ActionButton>
+              <Cart>
+                <ShoppingCart
+                  size={22}
+                  color={theme["base-card"]}
+                  weight="fill"
+                />
+              </Cart>
+            </Action>
+          </CoffeeCardFooter>
+        </CoffeeCard>
+      </CoffeeList>
 
       {/* <CoffeeList></CoffeeList> */}
     </HomeContainer>
